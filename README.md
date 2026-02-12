@@ -33,5 +33,6 @@ pnpm preview
 Node version: >=18
 
 ## 🌍 Live Demo
+[Live Demo](https://simple-dashboard-3-d-five.vercel.app/)
 
-https://your-app.vercel.app
+
