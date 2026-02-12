@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FormControl,
+  FormHelperText,
   InputLabel,
   MenuItem,
   Select,
@@ -16,7 +17,11 @@ export default function DesignerPicker() {
 
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
-      <FormControl fullWidth size="small">
+      <FormControl
+        fullWidth
+        size="small"
+        error={designers.length === 0 || !selectedDesignerId}
+      >
         <InputLabel id="designer-label">
           Selected designer (required)
         </InputLabel>
@@ -35,13 +40,13 @@ export default function DesignerPicker() {
             </MenuItem>
           ))}
         </Select>
+        {designers.length === 0 && (
+          <FormHelperText>Add designers first.</FormHelperText>
+        )}
+        {!selectedDesignerId && designers.length !== 0 && (
+          <FormHelperText>Please select a designer.</FormHelperText>
+        )}
       </FormControl>
-
-      {designers.length === 0 && (
-        <Typography variant="body2" color="error">
-          Add designers first.
-        </Typography>
-      )}
     </Stack>
   );
 }
