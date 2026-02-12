@@ -127,10 +127,6 @@ function Scene() {
       enqueueSnackbar(res.reason ?? "Something went wrong", {
         variant: "error",
       });
-    } else {
-      enqueueSnackbar("Object added successfully", {
-        variant: "success",
-      });
     }
   };
 
