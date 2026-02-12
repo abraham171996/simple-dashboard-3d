@@ -34,4 +34,5 @@ Node version: >=18
 
 ## 🌍 Live Demo
 
-https://your-app.vercel.app
+[https://your-app.vercel.app](https://simple-dashboard-3-d-five.vercel.app/)
+
